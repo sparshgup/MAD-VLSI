@@ -1,0 +1,25 @@
+magic
+tech sky130A
+timestamp 1758238590
+<< metal1 >>
+rect 500 780 850 840
+rect 600 370 720 440
+rect 500 0 850 60
+use inv  inv_0
+timestamp 1758238523
+transform 1 0 850 0 1 110
+box -140 -110 370 730
+use nand2  nand2_0
+timestamp 1758238574
+transform 1 0 100 0 1 110
+box -100 -110 500 730
+<< labels >>
+rlabel metal1 662 814 666 814 1 VDD
+rlabel metal1 639 32 643 32 1 GND
+rlabel space 7 508 11 508 1 A
+port 2 n
+rlabel space 14 297 18 297 1 B
+port 3 n
+rlabel space 1207 398 1211 398 1 Y
+port 1 n
+<< end >>

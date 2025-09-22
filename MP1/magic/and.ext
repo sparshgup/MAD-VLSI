@@ -1,0 +1,49 @@
+timestamp 1758238590
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use inv inv_0 1 0 1700 0 1 220
+use nand2 nand2_0 1 0 200 0 1 220
+node "GND" 1 353.851 1000 0 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 84000 1640 0 0 0 0 0 0 0 0 0 0
+node "m1_1200_740#" 0 142.425 1200 740 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 33600 760 0 0 0 0 0 0 0 0 0 0
+node "VDD" 1 355.111 1000 1560 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 84000 1640 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "VDD" "GND" 13.5839
+cap "VDD" "m1_1200_740#" 14.4658
+cap "m1_1200_740#" "GND" 15.7612
+cap "inv_0/A" "nand2_0/A" 0.0471071
+cap "inv_0/A" "nand2_0/GND" 23.1694
+cap "inv_0/A" "nand2_0/B" 7.54553
+cap "inv_0/A" "inv_0/Y" 11.0031
+cap "inv_0/A" "nand2_0/VDD" 7.23863
+cap "nand2_0/B" "nand2_0/GND" 0.0565196
+cap "nand2_0/VDD" "nand2_0/GND" -2.83667
+cap "inv_0/Y" "nand2_0/B" 0.0434744
+cap "nand2_0/B" "nand2_0/VDD" 0.380839
+cap "nand2_0/GND" "nand2_0/A" 0.0944445
+cap "nand2_0/GND" "nand2_0/VDD" -1.40641
+cap "nand2_0/VDD" "inv_0/Y" 0.788356
+cap "nand2_0/B" "inv_0/A" 6.2681
+cap "nand2_0/GND" "inv_0/A" 18.6887
+cap "inv_0/Y" "inv_0/A" 14.1614
+cap "nand2_0/A" "inv_0/A" 0.0989815
+cap "nand2_0/VDD" "inv_0/A" 4.83335
+cap "nand2_0/GND" "nand2_0/B" 0.164238
+cap "nand2_0/GND" "nand2_0/a_280_0#" 0.147371
+cap "inv_0/Y" "nand2_0/B" 0.450445
+cap "nand2_0/VDD" "inv_0/A" 6.0274
+cap "nand2_0/B" "inv_0/A" 0.542373
+cap "nand2_0/VDD" "nand2_0/GND" -2.95302
+cap "nand2_0/VDD" "nand2_0/B" 0.493878
+cap "nand2_0/VDD" "inv_0/A" 4.89148
+cap "nand2_0/VDD" "nand2_0/GND" -1.70695
+cap "nand2_0/B" "inv_0/A" 0.542373
+merge "nand2_0/GND" "inv_0/GND" -155.165 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -480 0 0 0 0 0 0 0 0 0 0
+merge "inv_0/GND" "VSUBS"
+merge "VSUBS" "GND"
+merge "nand2_0/VDD" "inv_0/VDD" -249.39 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -480 0 0 0 0 0 0 0 0 0 0
+merge "inv_0/VDD" "VDD"
+merge "nand2_0/Y" "inv_0/A" -214.639 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1600 -480 0 0 0 0 0 0 0 0 0 0
+merge "inv_0/A" "m1_1200_740#"

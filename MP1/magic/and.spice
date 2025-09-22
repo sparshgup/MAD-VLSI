@@ -1,0 +1,20 @@
+* SPICE3 file created from and.ext - technology: sky130A
+
+.subckt inv A Y VDD GND
+X0 Y A GND GND sky130_fd_pr__nfet_01v8 ad=1.4 pd=4.8 as=1.4 ps=4.8 w=1 l=0.4
+X1 Y A VDD VDD sky130_fd_pr__pfet_01v8 ad=1.4 pd=4.8 as=1.4 ps=4.8 w=1 l=0.4
+.ends
+
+.subckt nand2 B A Y VDD GND
+X0 a_280_0# A GND GND sky130_fd_pr__nfet_01v8 ad=0.6 pd=2.2 as=1 ps=4 w=1 l=0.4
+X1 VDD B Y VDD sky130_fd_pr__pfet_01v8 ad=1 pd=4 as=0.6 ps=2.2 w=1 l=0.4
+X2 Y B a_280_0# GND sky130_fd_pr__nfet_01v8 ad=1 pd=4 as=0.6 ps=2.2 w=1 l=0.4
+X3 Y A VDD VDD sky130_fd_pr__pfet_01v8 ad=0.6 pd=2.2 as=1 ps=4 w=1 l=0.4
+.ends
+
+.subckt and
+Xinv_0 inv_0/A inv_0/Y VDD GND inv
+Xnand2_0 nand2_0/B nand2_0/A inv_0/A VDD GND nand2
+C0 VDD GND 2.83184f
+.ends
+
