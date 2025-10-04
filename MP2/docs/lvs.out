@@ -1,0 +1,88 @@
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Subcircuit summary:
+Circuit 1: dff                             |Circuit 2: dff                             
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (12)               |sky130_fd_pr__pfet_01v8 (12)               
+sky130_fd_pr__nfet_01v8 (12)               |sky130_fd_pr__nfet_01v8 (12)               
+Number of devices: 24                      |Number of devices: 24                      
+Number of nets: 20 **Mismatch**            |Number of nets: 18 **Mismatch**            
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: dff                             |Circuit 2: dff                             
+
+---------------------------------------------------------------------------------------
+Net: VP                                    |Net: VP                                    
+  sky130_fd_pr__pfet_01v8/(1|3) = 8        |  sky130_fd_pr__pfet_01v8/(1|3) = 8        
+                                           |  sky130_fd_pr__pfet_01v8/4 = 12           
+                                           |                                           
+Net: VN                                    |Net: VN                                    
+  sky130_fd_pr__nfet_01v8/(1|3) = 8        |  sky130_fd_pr__nfet_01v8/(1|3) = 8        
+                                           |  sky130_fd_pr__nfet_01v8/4 = 12           
+                                           |                                           
+Net: VDD                                   |(no matching net)                          
+  sky130_fd_pr__pfet_01v8/4 = 12           |                                           
+                                           |                                           
+Net: GND                                   |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/4 = 12           |                                           
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Port matching may fail to disambiguate symmetries.
+  Flattening non-matched subcircuits dff dff
+
+Cell inv (1) disconnected node: m1_n40_n680#
+Subcircuit summary:
+Circuit 1: inv                             |Circuit 2: inv                             
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
+sky130_fd_pr__pfet_01v8 (1)                |sky130_fd_pr__pfet_01v8 (1)                
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely with port errors.
+
+Subcircuit pins:
+Circuit 1: inv                             |Circuit 2: inv                             
+-------------------------------------------|-------------------------------------------
+GND                                        |GND                                        
+A                                          |A                                          
+Y                                          |a_0_0# **Mismatch**                        
+VDD                                        |VDD                                        
+(no matching pin)                          |m1_n40_n680#                               
+---------------------------------------------------------------------------------------
+Cell pin lists for inv and inv altered to match.
+Device classes inv and inv are equivalent.
+
+Cells have no pins;  pin matching not needed.
+Device classes ../xschem/simulation/sreg.spice and ../magic/sreg.spice are equivalent.
+
+Final result: Verify:  cell ../magic/sreg.spice has no elements and/or nodes.  Not checked.
