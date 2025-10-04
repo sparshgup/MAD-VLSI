@@ -1,0 +1,42 @@
+* SPICE3 file created from sreg.ext - technology: sky130A
+
+.subckt dff D VP Qn VN CLK Dn2 Dn1 Q
+X0 VP Q Qn VP sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X1 a_620_1710# a_110_250# VP VP sky130_fd_pr__pfet_01v8 ad=0.125 pd=1.25 as=0.5 ps=3 w=1 l=0.15
+X2 a_110_250# CLK a_30_250# VN sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.125 ps=1.25 w=1 l=0.15
+X3 Q Qn a_440_740# VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X4 a_30_740# D VN VN sky130_fd_pr__nfet_01v8 ad=0.125 pd=1.25 as=0.5 ps=3 w=1 l=0.15
+X5 a_440_250# CLK VN VN sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X6 VN a_110_250# a_440_250# VN sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X7 Q CLK a_620_1200# VP sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.125 ps=1.25 w=1 l=0.15
+X8 Qn Q a_440_250# VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X9 Qn CLK a_620_1710# VP sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.125 ps=1.25 w=1 l=0.15
+X10 a_30_250# Dn2 VN VN sky130_fd_pr__nfet_01v8 ad=0.125 pd=1.25 as=0.5 ps=3 w=1 l=0.15
+X11 a_110_740# a_110_250# a_n100_1200# VP sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X12 a_110_250# a_110_740# a_n100_1710# VP sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X13 a_n100_1200# CLK VP VP sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X14 VN a_110_250# a_110_740# VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X15 a_n100_1710# CLK VP VP sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X16 VP D a_n100_1200# VP sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X17 a_110_740# CLK a_30_740# VN sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.125 ps=1.25 w=1 l=0.15
+X18 VP Qn Q VP sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X19 a_620_1200# a_110_740# VP VP sky130_fd_pr__pfet_01v8 ad=0.125 pd=1.25 as=0.5 ps=3 w=1 l=0.15
+X20 VN a_110_740# a_110_250# VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.25 ps=1.5 w=1 l=0.15
+X21 a_440_740# CLK VN VN sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
+X22 VP Dn1 a_n100_1710# VP sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+X23 VN a_110_740# a_440_740# VN sky130_fd_pr__nfet_01v8 ad=0.25 pd=1.5 as=0.5 ps=3 w=1 l=0.15
+.ends
+
+.subckt inv m1_n40_n680# A VDD a_0_0# GND
+X0 GND A a_0_0# GND sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+X1 VDD A a_0_0# VDD sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
+.ends
+
+.subckt sreg Dn
+Xdff_0 Dn dff_3/VP dff_0/Qn VSUBS dff_3/CLK dff_0/Dn2 dff_0/Dn2 dff_1/D dff
+Xdff_1 dff_1/D dff_3/VP dff_1/Qn VSUBS dff_3/CLK dff_0/Qn dff_0/Qn dff_2/D dff
+Xdff_2 dff_2/D dff_3/VP dff_2/Qn VSUBS dff_3/CLK dff_1/Qn dff_1/Qn dff_3/D dff
+Xdff_3 dff_3/D dff_3/VP dff_3/Qn VSUBS dff_3/CLK dff_2/Qn dff_2/Qn dff_3/Q dff
+Xinv_0 dff_3/CLK Dn dff_3/VP dff_0/Dn2 VSUBS inv
+.ends
+

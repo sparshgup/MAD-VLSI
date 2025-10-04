@@ -1,0 +1,91 @@
+magic
+tech sky130A
+timestamp 1759610659
+<< nwell >>
+rect 155 550 205 690
+rect 765 540 770 955
+rect 1330 540 1335 955
+rect 1895 540 1900 955
+<< poly >>
+rect 155 800 230 815
+rect 765 795 780 810
+rect 1330 795 1345 810
+rect 1895 795 1910 810
+rect 155 225 215 240
+rect 200 210 215 225
+rect 765 210 780 225
+rect 1330 210 1345 225
+rect 1895 210 1910 225
+<< locali >>
+rect 205 495 250 515
+rect 205 475 215 495
+rect 763 455 780 495
+rect 1328 455 1345 495
+rect 1893 455 1910 495
+<< viali >>
+rect 260 485 280 505
+<< metal1 >>
+rect 155 570 215 926
+rect 765 570 780 926
+rect 1330 570 1345 926
+rect 1895 570 1910 926
+rect 155 505 290 515
+rect 155 485 260 505
+rect 280 485 290 505
+rect 155 475 290 485
+rect 155 94 216 440
+rect 765 94 780 440
+rect 1330 94 1345 440
+rect 1895 94 1910 440
+rect 155 0 216 40
+rect 765 0 780 40
+rect 1330 0 1345 40
+rect 1895 0 1910 40
+use dff  dff_0
+timestamp 1759602863
+transform 1 0 275 0 1 -30
+box -70 30 490 1010
+use dff  dff_1
+timestamp 1759602863
+transform 1 0 840 0 1 -30
+box -70 30 490 1010
+use dff  dff_2
+timestamp 1759602863
+transform 1 0 1405 0 1 -30
+box -70 30 490 1010
+use dff  dff_3
+timestamp 1759602863
+transform 1 0 1970 0 1 -30
+box -70 30 490 1010
+use inv  inv_0
+timestamp 1759609458
+transform 1 0 -30 0 1 340
+box -20 -340 185 586
+<< labels >>
+rlabel metal1 193 484 193 484 1 Dn
+port 3 n
+rlabel space 702 717 703 718 1 Qn0
+port 6 n
+rlabel space 725 463 725 463 1 Q0
+port 7 n
+rlabel space 1268 719 1268 719 1 Qn1
+port 8 n
+rlabel space 1829 718 1829 718 1 Qn2
+port 9 n
+rlabel space 2396 718 2396 718 1 Qn3
+port 10 n
+rlabel space 1289 464 1289 464 1 Q1
+port 11 n
+rlabel space 1855 463 1855 463 1 Q2
+port 12 n
+rlabel space 2419 463 2419 463 1 Q3
+port 13 n
+rlabel space -47 19 -47 19 1 CLK
+port 14 n
+rlabel space -46 99 -46 99 1 GND
+port 15 n
+rlabel space -49 920 -49 920 3 VDD
+port 16 e
+rlabel space -48 508 -48 508 3 D
+port 17 e
+<< end >>
