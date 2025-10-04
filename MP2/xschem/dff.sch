@@ -489,5 +489,5 @@ C {ipin.sym} -1560 -700 0 0 {name=p4 lab=Dn1}
 C {ipin.sym} -1560 -420 0 0 {name=p5 lab=D}
 C {ipin.sym} -1560 -140 0 0 {name=p6 lab=Dn2}
 C {ipin.sym} -1560 -60 0 0 {name=p8 lab=CLK}
-C {iopin.sym} -1560 -740 2 0 {name=p9 lab=VP}
-C {iopin.sym} -1560 -100 2 0 {name=p1 lab=VN}
+C {ipin.sym} -1560 -740 0 0 {name=p7 lab=VP}
+C {ipin.sym} -1560 -100 0 0 {name=p9 lab=VN}
