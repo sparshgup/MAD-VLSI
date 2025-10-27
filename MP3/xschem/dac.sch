@@ -55,9 +55,6 @@ N -1300 -590 -1300 -560 {lab=Vout}
 N -1300 -600 -1300 -590 {lab=Vout}
 N -1180 -600 -1180 -560 {lab=Vout}
 N -2000 -560 -1120 -560 {lab=Vout}
-C {madvlsi/resistor.sym} -1940 -1020 0 0 {name=RBIAS
-value=60k
-m=1}
 C {madvlsi/vsource.sym} -1750 -950 0 0 {name=VDD
 value=1.8}
 C {madvlsi/vdd.sym} -1750 -980 0 0 {name=VDD1 lab=VDD}
@@ -79,7 +76,7 @@ spiceprefix=X
 }
 C {madvlsi/vdd.sym} -1940 -910 0 0 {name=l2 lab=VDD}
 C {lab_pin.sym} -2000 -1080 0 0 {name=p2 sig_type=std_logic lab=VB}
-C {madvlsi/pmos3.sym} -1900 -720 0 0 {name=MPM6
+C {madvlsi/pmos3.sym} -1900 -720 0 0 {name=MPM6[63:0]
 L=0.15
 W=1
 body=VDD
@@ -94,7 +91,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/pmos3.sym} -1780 -720 0 0 {name=MPM5
+C {madvlsi/pmos3.sym} -1780 -720 0 0 {name=MPM5[31:0]
 L=0.15
 W=1
 body=VDD
@@ -109,7 +106,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/pmos3.sym} -1660 -720 0 0 {name=MPM4
+C {madvlsi/pmos3.sym} -1660 -720 0 0 {name=MPM4[15:0]
 L=0.15
 W=1
 body=VDD
@@ -124,7 +121,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/pmos3.sym} -1540 -720 0 0 {name=MPM3
+C {madvlsi/pmos3.sym} -1540 -720 0 0 {name=MPM3[7:0]
 L=0.15
 W=1
 body=VDD
@@ -139,7 +136,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/pmos3.sym} -1420 -720 0 0 {name=MPM2
+C {madvlsi/pmos3.sym} -1420 -720 0 0 {name=MPM2[3:0]
 L=0.15
 W=1
 body=VDD
@@ -154,7 +151,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/pmos3.sym} -1300 -720 0 0 {name=MPM1
+C {madvlsi/pmos3.sym} -1300 -720 0 0 {name=MPM1[1:0]
 L=0.15
 W=1
 body=VDD
@@ -379,3 +376,9 @@ value=0}
 C {madvlsi/gnd.sym} -1660 -920 0 0 {name=l10 lab=GND}
 C {lab_pin.sym} -1660 -980 2 0 {name=p1 sig_type=std_logic lab=Vout}
 C {lab_pin.sym} -2000 -560 0 0 {name=p10 sig_type=std_logic lab=Vout}
+C {sky130_fd_pr/res_xhigh_po_0p35.sym} -1940 -1020 0 0 {name=RBIAS
+L=10.66
+model=res_xhigh_po_0p35
+spiceprefix=X
+mult=1}
+C {madvlsi/gnd.sym} -1960 -1020 1 0 {name=l11 lab=GND}
