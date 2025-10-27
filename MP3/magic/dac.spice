@@ -1,6 +1,5 @@
 * SPICE3 file created from dac.ext - technology: sky130A
 
-.subckt dac VDD VB Vout GND b0 b1 b2 b3 b4 b5 b6
 X0 a_130_0# VB VDD VDD sky130_fd_pr__pfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
 X1 a_260_2000# VB a_130_2000# VDD sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
 X2 a_8190_2400# VB a_8060_2400# VDD sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
@@ -137,16 +136,14 @@ X132 a_3640_2000# VB a_3510_2000# VDD sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=
 X133 a_4420_2400# VB a_4290_2400# VDD sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
 X134 a_1560_1600# VB a_1430_1600# VDD sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
 X135 a_2860_2000# VB a_2730_2000# VDD sky130_fd_pr__pfet_01v8 ad=0.25 pd=1.5 as=0.25 ps=1.5 w=1 l=0.15
-C0 Vout a_2080_1600# 3.18823f
-C1 Vout a_4160_2000# 6.50283f
-C2 VB VDD 18.0279f
-C3 a_8320_2400# Vout 12.7377f
+C0 VDD VB 18.0279f
+C1 a_8320_2400# Vout 12.7377f
+C2 a_2080_1600# Vout 3.18823f
+C3 a_4160_2000# Vout 6.50283f
 C4 Vout GND 31.8645f
 C5 VB GND 11.7225f
 C6 VDD GND 24.8832f
-C7 a_1040_1200# GND 2.00119f
-C8 a_2080_1600# GND 2.60211f
-C9 a_4160_2000# GND 3.6586f
-C10 a_8320_2400# GND 4.11317f
-.ends
-
+C7 a_1040_1200# GND 2.00119f **FLOATING
+C8 a_2080_1600# GND 2.60211f **FLOATING
+C9 a_4160_2000# GND 3.6586f **FLOATING
+C10 a_8320_2400# GND 4.11317f **FLOATING

@@ -333,37 +333,50 @@ name=TT_MODELS
 only_toplevel=false
 value=".lib $::SKYWATER_MODELS/sky130.lib.spice tt"
 }
-C {code_shown.sym} -1090 -1070 0 0 {name=SPICE only_toplevel=false value=".control
+C {code_shown.sym} -1090 -1130 0 0 {name=SPICE only_toplevel=false value=".control
   set wr_singlescale
   let mc_runs = 10
   let run = 1
+
   dowhile run <= mc_runs
      set appendwrite = FALSE
      set wr_vecnames
-     let code = 0
-     dowhile code < 128
-        let b6 = floor(code/64)%2
-        let b5 = floor(code/32)%2
-        let b4 = floor(code/16)%2
-        let b3 = floor(code/8)%2
-        let b2 = floor(code/4)%2
-        let b1 = floor(code/2)%2
-        let b0 = code%2
-        alter V_b6 dc = \{1.8*b6\}
-        alter V_b5 dc = \{1.8*b5\}
-        alter V_b4 dc = \{1.8*b4\}
-        alter V_b3 dc = \{1.8*b3\}
-        alter V_b2 dc = \{1.8*b2\}
-        alter V_b1 dc = \{1.8*b1\}
-        alter V_b0 dc = \{1.8*b0\}
-	save all
-        op
-        wrdata dacrun\{$&run\}.txt v(b0) v(b1) v(b2) v(b3) v(b4) v(b5) v(b6) I(Vouts)
-        if code eq 0
-           set appendwrite
-           set wr_vecnames = FALSE
+
+     foreach vddval 1.6 1.8 2.0
+        alter @VDD[dc] = $vddval
+
+        let code = 0
+        dowhile code < 128
+
+           let b6 = floor(code/64)%2
+           let b5 = floor(code/32)%2
+           let b4 = floor(code/16)%2
+           let b3 = floor(code/8)%2
+           let b2 = floor(code/4)%2
+           let b1 = floor(code/2)%2
+           let b0 = code%2
+
+           alter V_b6 dc = \{1.8*b6\}
+           alter V_b5 dc = \{1.8*b5\}
+           alter V_b4 dc = \{1.8*b4\}
+           alter V_b3 dc = \{1.8*b3\}
+           alter V_b2 dc = \{1.8*b2\}
+           alter V_b1 dc = \{1.8*b1\}
+           alter V_b0 dc = \{1.8*b0\}
+
+           save all
+           op
+
+           if code eq 0
+              wrdata dacrun\{$&run\}_vdd\{$vddval\}.txt code v(b0) v(b1) v(b2) v(b3) v(b4) v(b5) v(b6) I(Vouts)
+           else
+              set appendwrite
+              set wr_vecnames = FALSE
+              wrdata dacrun\{$&run\}_vdd\{$vddval\}.txt code v(b0) v(b1) v(b2) v(b3) v(b4) v(b5) v(b6) I(Vouts)
+           end
+
+           let code = code + 1
         end
-        let code = code + 1
      end
      reset
      let run = run + 1
