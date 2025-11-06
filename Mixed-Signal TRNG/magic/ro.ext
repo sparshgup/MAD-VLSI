@@ -1,0 +1,77 @@
+timestamp 1762472814
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use inv inv_4 1 0 1780 0 1 50
+use inv inv_3 1 0 1370 0 1 50
+use inv inv_2 1 0 960 0 1 50
+use inv inv_1 1 0 550 0 1 50
+use inv inv_0 1 0 140 0 1 50
+port "VN" 5 2042 28 2042 28 m1
+port "VP" 4 2042 1522 2042 1522 m1
+port "RO_OUT" 3 2044 560 2044 560 m1
+node "VN" 0 31.4199 2042 28 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1200 160 0 0 0 0 0 0 0 0 0 0
+node "VP" 0 32.1677 2042 1522 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1200 160 0 0 0 0 0 0 0 0 0 0
+node "RO_OUT" 78 1100.8 2044 560 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12800 640 164000 4260 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "RO_OUT" "VP" 0.949773
+cap "VN" "RO_OUT" 1.7725
+cap "inv_3/IN" "inv_2/IN" 14.7673
+cap "inv_4/VN" "inv_2/IN" 76.7839
+cap "inv_4/VP" "inv_1/IN" 177.455
+cap "inv_4/VP" "inv_3/IN" 174.583
+cap "inv_4/VN" "inv_4/VP" -50.9849
+cap "inv_4/OUT" "inv_2/IN" 153.41
+cap "inv_3/IN" "inv_4/IN" 3.5983
+cap "inv_4/VN" "inv_1/IN" 76.7839
+cap "inv_4/VP" "inv_4/OUT" 210.412
+cap "inv_4/VN" "inv_3/IN" 77.8112
+cap "inv_4/VP" "inv_2/IN" 177.963
+cap "inv_4/OUT" "inv_1/IN" 163.296
+cap "inv_4/OUT" "inv_3/IN" 118.7
+cap "inv_4/VN" "inv_4/OUT" 266.666
+cap "inv_1/IN" "inv_2/IN" 17.083
+cap "inv_3/IN" "inv_4/VP" 3.38052
+cap "inv_4/OUT" "inv_4/IN" 160.143
+cap "inv_4/VN" "inv_4/IN" 76.1289
+cap "inv_4/OUT" "inv_4/VN" 102.847
+cap "inv_4/VP" "inv_4/OUT" 82.8424
+cap "inv_4/VP" "inv_4/IN" 175.505
+cap "inv_4/VP" "inv_4/VN" -21.8259
+cap "inv_2/IN" "inv_3/IN" 2.31579
+cap "inv_3/IN" "inv_4/IN" 13.4847
+cap "inv_3/IN" "inv_4/OUT" 34.7098
+cap "inv_3/IN" "inv_4/VN" -1.02725
+cap "inv_1/IN" "inv_2/IN" 1.26316
+cap "inv_4/VP" "inv_2/IN" 11.3944
+cap "inv_1/IN" "inv_4/VP" 11.3944
+cap "inv_4/VN" "inv_4/VP" -25.0796
+cap "inv_1/IN" "inv_4/OUT" 1.26316
+cap "inv_4/VP" "inv_4/OUT" 34.6104
+cap "inv_3/IN" "inv_2/IN" 0.631579
+cap "inv_3/IN" "inv_4/VP" 8.71602
+cap "inv_4/IN" "inv_4/VP" 8.89567
+cap "inv_3/IN" "inv_4/IN" 1.26316
+cap "inv_3/IN" "inv_4/VP" 2.67838
+cap "inv_3/IN" "inv_2/IN" 0.631579
+cap "inv_4/OUT" "inv_4/VP" 13.9373
+cap "inv_4/VN" "inv_4/VP" -11.2439
+merge "inv_0/VN" "inv_1/VN" -455.482 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1200 -640 0 0 0 0 0 0 0 0 0 0
+merge "inv_1/VN" "inv_2/VN"
+merge "inv_2/VN" "inv_3/VN"
+merge "inv_3/VN" "inv_4/VN"
+merge "inv_4/VN" "VSUBS"
+merge "VSUBS" "VN"
+merge "inv_0/IN" "inv_4/OUT" -1011.17 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -7600 -560 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inv_4/OUT" "RO_OUT"
+merge "inv_1/OUT" "inv_2/IN" -277.792 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inv_0/VP" "inv_1/VP" -814.421 0 0 0 0 0 -7040 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1200 -640 0 0 0 0 0 0 0 0 0 0
+merge "inv_1/VP" "inv_2/VP"
+merge "inv_2/VP" "inv_3/VP"
+merge "inv_3/VP" "inv_4/VP"
+merge "inv_4/VP" "VP"
+merge "inv_2/OUT" "inv_3/IN" -277.792 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inv_0/OUT" "inv_1/IN" -268.353 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inv_3/OUT" "inv_4/IN" -263.219 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -80 0 0 0 0 0 0 0 0 0 0 0 0

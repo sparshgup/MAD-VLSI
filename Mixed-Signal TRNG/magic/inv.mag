@@ -1,0 +1,113 @@
+magic
+tech sky130A
+timestamp 1762392240
+<< nwell >>
+rect -70 280 135 720
+<< nmos >>
+rect 50 20 65 220
+<< pmos >>
+rect 50 300 65 700
+<< ndiff >>
+rect 0 205 50 220
+rect 0 35 15 205
+rect 35 35 50 205
+rect 0 20 50 35
+rect 65 205 115 220
+rect 65 35 80 205
+rect 100 35 115 205
+rect 65 20 115 35
+<< pdiff >>
+rect 0 685 50 700
+rect 0 315 15 685
+rect 35 315 50 685
+rect 0 300 50 315
+rect 65 685 115 700
+rect 65 315 80 685
+rect 100 315 115 685
+rect 65 300 115 315
+<< ndiffc >>
+rect 15 35 35 205
+rect 80 35 100 205
+<< pdiffc >>
+rect 15 315 35 685
+rect 80 315 100 685
+<< psubdiff >>
+rect -50 205 0 220
+rect -50 35 -35 205
+rect -15 35 0 205
+rect -50 20 0 35
+<< nsubdiff >>
+rect -50 685 0 700
+rect -50 315 -35 685
+rect -15 315 0 685
+rect -50 300 0 315
+<< psubdiffcont >>
+rect -35 35 -15 205
+<< nsubdiffcont >>
+rect -35 315 -15 685
+<< poly >>
+rect 50 700 65 715
+rect 50 275 65 300
+rect 10 265 65 275
+rect 10 245 20 265
+rect 40 245 65 265
+rect 10 235 65 245
+rect 50 220 65 235
+rect 50 5 65 20
+<< polycont >>
+rect 20 245 40 265
+<< locali >>
+rect -45 745 -15 750
+rect -45 725 -40 745
+rect -20 725 -15 745
+rect -45 695 -15 725
+rect -45 685 45 695
+rect -45 315 -35 685
+rect -15 315 15 685
+rect 35 315 45 685
+rect -45 305 45 315
+rect 70 685 110 695
+rect 70 315 80 685
+rect 100 315 110 685
+rect 70 275 110 315
+rect -70 265 50 275
+rect -70 255 20 265
+rect 10 245 20 255
+rect 40 245 50 265
+rect 10 235 50 245
+rect 70 255 135 275
+rect -45 205 45 215
+rect -45 35 -35 205
+rect -15 35 15 205
+rect 35 35 45 205
+rect -45 25 45 35
+rect 70 205 110 255
+rect 70 35 80 205
+rect 100 35 110 205
+rect 70 25 110 35
+rect -45 0 -15 25
+rect -45 -20 -40 0
+rect -20 -20 -15 0
+rect -45 -25 -15 -20
+<< viali >>
+rect -40 725 -20 745
+rect -40 -20 -20 0
+<< metal1 >>
+rect -70 745 135 750
+rect -70 725 -40 745
+rect -20 725 135 745
+rect -70 720 135 725
+rect -70 0 135 5
+rect -70 -20 -40 0
+rect -20 -20 135 0
+rect -70 -25 135 -20
+<< labels >>
+rlabel metal1 32 748 32 748 5 VP
+port 1 s
+rlabel metal1 34 -23 34 -23 1 VN
+port 2 n
+rlabel locali -67 265 -67 265 1 IN
+port 3 n
+rlabel locali 133 266 133 266 7 OUT
+port 4 w
+<< end >>

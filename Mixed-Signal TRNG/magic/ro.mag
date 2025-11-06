@@ -1,0 +1,51 @@
+magic
+tech sky130A
+timestamp 1762472814
+<< locali >>
+rect 0 290 40 300
+rect 0 270 10 290
+rect 30 270 40 290
+rect 0 260 40 270
+rect 985 290 1025 300
+rect 985 270 995 290
+rect 1015 270 1025 290
+rect 985 260 1025 270
+<< viali >>
+rect 10 270 30 290
+rect 995 270 1015 290
+<< metal1 >>
+rect 1015 745 1025 775
+rect 0 290 1025 300
+rect 0 270 10 290
+rect 30 270 995 290
+rect 1015 270 1025 290
+rect 0 260 1025 270
+rect 1015 0 1025 30
+use inv  inv_0
+timestamp 1762392240
+transform 1 0 70 0 1 25
+box -70 -25 135 750
+use inv  inv_1
+timestamp 1762392240
+transform 1 0 275 0 1 25
+box -70 -25 135 750
+use inv  inv_2
+timestamp 1762392240
+transform 1 0 480 0 1 25
+box -70 -25 135 750
+use inv  inv_3
+timestamp 1762392240
+transform 1 0 685 0 1 25
+box -70 -25 135 750
+use inv  inv_4
+timestamp 1762392240
+transform 1 0 890 0 1 25
+box -70 -25 135 750
+<< labels >>
+rlabel metal1 1022 280 1022 280 1 RO_OUT
+port 3 n
+rlabel metal1 1021 761 1021 761 1 VP
+port 4 n
+rlabel metal1 1021 14 1021 14 1 VN
+port 5 n
+<< end >>
