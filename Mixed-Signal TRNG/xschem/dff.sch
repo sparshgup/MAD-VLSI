@@ -88,8 +88,8 @@ N -1350 -200 -1350 -140 {lab=#net7}
 N -1150 -170 -1150 -140 {lab=#net7}
 N -1560 -100 -900 -100 {lab=VN}
 N -1560 -60 -900 -60 {lab=CLK}
-N -1470 -170 -1470 -140 {lab=Dn2}
-N -1560 -140 -1470 -140 {lab=Dn2}
+N -1470 -170 -1470 -140 {lab=#net11}
+N -1560 -140 -1470 -140 {lab=#net11}
 N -1260 -200 -1260 -100 {lab=VN}
 N -1110 -200 -1110 -100 {lab=VN}
 N -1110 -340 -1110 -200 {lab=VN}
@@ -485,9 +485,7 @@ C {opin.sym} -900 -700 0 0 {name=p2 lab=Qn
 }
 C {opin.sym} -900 -420 0 0 {name=p3 lab=Q
 }
-C {ipin.sym} -1560 -700 0 0 {name=p4 lab=Dn1}
 C {ipin.sym} -1560 -420 0 0 {name=p5 lab=D}
-C {ipin.sym} -1560 -140 0 0 {name=p6 lab=Dn2}
 C {ipin.sym} -1560 -60 0 0 {name=p8 lab=CLK}
 C {ipin.sym} -1560 -740 0 0 {name=p7 lab=VP}
 C {ipin.sym} -1560 -100 0 0 {name=p9 lab=VN}
@@ -518,3 +516,5 @@ C {lab_pin.sym} -800 -240 2 0 {name=p14 sig_type=std_logic lab=Dn2}
 C {sky130_fd_pr/corner.sym} -670 -730 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {code_shown.sym} -810 -90 0 0 {name=SPICE only_toplevel=false value=".tran 0.1n 400n
 .save all"}
+C {lab_pin.sym} -1560 -700 0 0 {name=p15 sig_type=std_logic lab=Dn1}
+C {lab_pin.sym} -1560 -140 0 0 {name=p16 sig_type=std_logic lab=Dn2}

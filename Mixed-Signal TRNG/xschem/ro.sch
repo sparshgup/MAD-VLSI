@@ -66,7 +66,7 @@ C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/inv.sym} -1410 -1470 0 0 {name
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/inv.sym} -1410 -1370 0 0 {name=x3}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/inv.sym} -1410 -1270 0 0 {name=x4}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/inv.sym} -1410 -1170 0 0 {name=x5}
-C {opin.sym} -1180 -1190 0 0 {name=p3 lab=RO_OUT}
+C {iopin.sym} -1180 -1190 0 0 {name=p3 lab=RO_OUT}
 C {code_shown.sym} -660 -1260 0 0 {name=SPICE only_toplevel=false value=".tran 0.01n 10n
 .save all"}
 C {madvlsi/vsource.sym} -640 -1560 0 0 {name=VDD

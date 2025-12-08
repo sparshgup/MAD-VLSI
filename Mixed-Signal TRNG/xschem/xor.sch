@@ -122,7 +122,7 @@ C {ipin.sym} -1920 -1310 0 0 {name=p7 lab=B}
 C {ipin.sym} -1920 -1170 0 0 {name=p1 lab=Bn}
 C {ipin.sym} -1920 -1360 0 0 {name=p2 lab=A}
 C {ipin.sym} -1920 -1120 0 0 {name=p3 lab=An}
-C {ipin.sym} -1370 -1240 2 0 {name=p4 lab=Y}
+C {opin.sym} -1370 -1240 0 0 {name=p4 lab=Y}
 C {ipin.sym} -1920 -1400 0 0 {name=p5 lab=VP}
 C {ipin.sym} -1920 -1080 0 0 {name=p6 lab=VN}
 C {madvlsi/pmos3.sym} -1840 -1310 0 0 {name=M1

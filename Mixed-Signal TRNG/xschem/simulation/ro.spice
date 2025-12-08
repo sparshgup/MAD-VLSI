@@ -1,6 +1,6 @@
 ** sch_path: /home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/ro.sch
 **.subckt ro RO_TAP_1 RO_TAP_2 RO_TAP_3 RO_TAP_4 RO_OUT VN VP
-*.opin RO_OUT
+*.iopin RO_OUT
 *.ipin VP
 *.ipin VN
 *.opin RO_TAP_1
