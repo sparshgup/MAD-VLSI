@@ -117,28 +117,6 @@ C {ipin.sym} -2360 -1200 1 0 {name=p5 lab=VN}
 C {opin.sym} -840 -980 0 0 {name=p3 lab=TRNG_OUT
 
 }
-C {madvlsi/vsource.sym} -2300 -510 0 0 {name=VDD
-value=1.8}
-C {madvlsi/gnd.sym} -2230 -480 0 0 {name=l1 lab=GND}
-C {madvlsi/vsource.sym} -2230 -510 0 0 {name=VGND
-value=0}
-C {madvlsi/gnd.sym} -2300 -480 0 0 {name=l2 lab=GND}
-C {lab_pin.sym} -2300 -540 2 0 {name=p4 sig_type=std_logic lab=VP}
-C {lab_pin.sym} -2230 -540 2 0 {name=p10 sig_type=std_logic lab=VN}
 C {ipin.sym} -2440 -1200 1 0 {name=p6 lab=CLK}
-C {madvlsi/vsource.sym} -2140 -510 0 0 {name=VCLK
-value="pulse(0 1.8 0 0.1n 0.1n 20n 40n)"}
-C {madvlsi/gnd.sym} -2140 -480 0 0 {name=l6 lab=GND}
-C {lab_pin.sym} -2140 -540 2 0 {name=p11 sig_type=std_logic lab=CLK}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/ro.sym} -2170 -900 0 0 {name=x1}
-C {code_shown.sym} -1670 -530 0 0 {name=SPICE only_toplevel=false value=".options uic
-.tran 10p 100n uic
-.save all"
-}
-C {sky130_fd_pr/corner.sym} -1390 -550 0 0 {name=CORNER only_toplevel=false corner=tt}
-C {madvlsi/gnd.sym} -1920 -480 0 0 {name=VNOISE1 lab=GND}
-C {lab_pin.sym} -1920 -540 2 0 {name=p7 sig_type=std_logic lab=RO_OUT
-}
-C {madvlsi/vsource.sym} -1920 -510 0 0 {name=VNOISE
-value="PWL(0 0 1n 0.001 2n -0.001 3n 0.002)"}
 C {opin.sym} -1920 -900 0 0 {name=p8 lab=RO_OUT}
