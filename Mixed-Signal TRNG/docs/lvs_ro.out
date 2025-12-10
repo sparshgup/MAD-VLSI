@@ -73,7 +73,6 @@ Device classes inv_tap and inv_tap are equivalent.
 
 Flattening instances of inv_tap in cell xschem/simulation/ro.spice (0) makes a better match
 Flattening instances of inv in cell xschem/simulation/ro.spice (0) makes a better match
-Removing zero-valued device vsrc from cell xschem/simulation/ro.spice (0) makes a better match
 Making another compare attempt.
 
 Cells have no pins;  pin matching not needed.

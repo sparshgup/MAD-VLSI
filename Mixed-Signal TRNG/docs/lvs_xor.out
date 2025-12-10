@@ -29,11 +29,6 @@ Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
 
-Removing zero-valued device vsrc from cell xschem/simulation/xor.spice (0) makes a better match
-Removing zero-valued device vsrc from cell xschem/simulation/xor.spice (0) makes a better match
-Removing zero-valued device vsrc from cell xschem/simulation/xor.spice (0) makes a better match
-Making another compare attempt.
-
 Cells have no pins;  pin matching not needed.
 Device classes xschem/simulation/xor.spice and magic/xor.spice are equivalent.
 

@@ -1,13 +1,13 @@
 * NGSPICE file created from xor.ext - technology: sky130A
 
-.subckt xor B Bn Y An
-X0 a_130_n670# B An An sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
-X1 Y a_910_n670# An An sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
-X2 a_130_n670# Bn An An sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
-X3 Y a_910_n670# An An sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
-X4 a_130_n670# B An An sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
-X5 a_910_n670# a_130_n670# An An sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
-X6 a_130_n670# Bn An An sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
-X7 a_910_n670# a_130_n670# An An sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
+.subckt xor B Bn Y VP A VN An
+X0 a_130_n670# B A VP sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
+X1 Y a_910_n670# VN VN sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
+X2 a_520_n670# Bn An VP sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
+X3 Y a_910_n670# VP VP sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
+X4 a_520_n670# B An VN sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
+X5 a_910_n670# a_520_n670# VN VN sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
+X6 a_130_n670# Bn A VN sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
+X7 a_910_n670# a_520_n670# VP VP sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
 .ends
 

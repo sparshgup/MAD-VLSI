@@ -1,8 +1,16 @@
 magic
 tech sky130A
-timestamp 1765257044
+timestamp 1765400128
 << poly >>
+rect -5 2190 85 2205
+rect 1095 2190 1185 2205
 rect 2020 1255 2060 1465
+rect -5 1060 85 1075
+rect 1095 1060 1185 1075
+rect -5 -400 85 -385
+rect 1095 -400 1185 -385
+rect -5 -1530 85 -1515
+rect 1095 -1530 1185 -1515
 << locali >>
 rect 920 1495 960 1505
 rect 920 1475 930 1495
@@ -333,19 +341,19 @@ rect -160 -1735 5 -1705
 rect 35 -1735 40 -1705
 rect -160 -1740 40 -1735
 use dff  dff_0
-timestamp 1765155590
+timestamp 1765398395
 transform 1 0 70 0 1 1560
 box -70 -710 890 955
 use dff  dff_1
-timestamp 1765155590
+timestamp 1765398395
 transform 1 0 1170 0 1 1560
 box -70 -710 890 955
 use dff  dff_2
-timestamp 1765155590
+timestamp 1765398395
 transform 1 0 70 0 1 -1030
 box -70 -710 890 955
 use dff  dff_3
-timestamp 1765155590
+timestamp 1765398395
 transform 1 0 1170 0 1 -1030
 box -70 -710 890 955
 use inv_tap  inv_tap_0
@@ -357,19 +365,46 @@ timestamp 1762724372
 transform 1 0 1430 0 1 25
 box 270 395 475 750
 use ro  ro_0
-timestamp 1762725630
+timestamp 1765399764
 transform 1 0 0 0 1 0
 box 0 0 1535 775
 use xor  xor_0
-timestamp 1765161965
+timestamp 1765397930
 transform 1 0 2220 0 1 320
 box -70 -420 720 485
 use xor  xor_1
-timestamp 1765161965
+timestamp 1765397930
 transform 1 0 2220 0 1 1270
 box -70 -420 720 485
 use xor  xor_2
-timestamp 1765161965
+timestamp 1765397930
 transform 1 0 2220 0 1 -630
 box -70 -420 720 485
+<< labels >>
+rlabel metal2 -141 2514 -141 2514 1 CLK
+port 1 n
+rlabel metal1 -62 2515 -62 2515 1 VP
+port 2 n
+rlabel metal1 2999 1747 2999 1747 1 VN
+port 3 n
+rlabel metal2 2938 246 2938 246 1 TRNG_OUT
+port 4 n
+rlabel metal2 1532 280 1532 280 1 RO_OUT
+port 5 n
+rlabel poly -3 -393 -3 -393 1 Dn11
+port 6 n
+rlabel poly -2 -1523 -2 -1523 1 Dn21
+port 7 n
+rlabel poly -3 2197 -3 2198 1 Dn12
+port 8 n
+rlabel poly -3 1067 -3 1067 1 Dn22
+port 9 n
+rlabel poly 1097 -392 1097 -392 1 Dn13
+port 10 n
+rlabel poly 1098 -1523 1098 -1523 1 Dn23
+port 11 n
+rlabel poly 1097 2198 1097 2198 1 Dn14
+port 12 n
+rlabel poly 1097 1067 1097 1067 1 Dn24
+port 13 n
 << end >>

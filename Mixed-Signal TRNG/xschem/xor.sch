@@ -155,33 +155,6 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {code_shown.sym} -1310 -1090 0 0 {name=SPICE only_toplevel=false value=".tran 0.05n 60n
-.save all"}
-C {madvlsi/vsource.sym} -2190 -1110 0 0 {name=VDD
-value=1.8}
-C {madvlsi/gnd.sym} -2120 -1080 0 0 {name=l1 lab=GND}
-C {sky130_fd_pr/corner.sym} -1130 -1170 0 0 {name=CORNER only_toplevel=false corner=tt}
-C {madvlsi/vsource.sym} -2120 -1110 0 0 {name=VGND
-value=0}
-C {madvlsi/gnd.sym} -2190 -1080 0 0 {name=l2 lab=GND}
-C {lab_pin.sym} -2190 -1140 2 0 {name=p8 sig_type=std_logic lab=VP}
-C {lab_pin.sym} -2120 -1140 2 0 {name=p9 sig_type=std_logic lab=VN}
-C {madvlsi/vsource.sym} -2190 -1370 0 0 {name=V_A
-value="pulse(0 1.8 0ns 0.1ns 0.1ns 5ns 10n)"}
-C {madvlsi/vsource.sym} -2190 -1250 0 0 {name=V_B
-value="pulse(0 1.8 2.5ns 0.1ns 0.1ns 5ns 10n)"}
-C {madvlsi/gnd.sym} -2190 -1220 0 0 {name=l5 lab=GND}
-C {madvlsi/gnd.sym} -2190 -1340 0 0 {name=l6 lab=GND}
-C {lab_pin.sym} -2190 -1400 2 0 {name=p10 sig_type=std_logic lab=A}
-C {lab_pin.sym} -2190 -1280 2 0 {name=p11 sig_type=std_logic lab=B}
-C {madvlsi/vsource.sym} -1290 -1370 0 0 {name=V_An
-value="pulse(1.8 0 0ns 0.1ns 0.1ns 5ns 10n)"}
-C {madvlsi/vsource.sym} -1290 -1250 0 0 {name=V_Bn
-value="pulse(1.8 0 2.5ns 0.1ns 0.1ns 5ns 10n)"}
-C {madvlsi/gnd.sym} -1290 -1220 0 0 {name=l3 lab=GND}
-C {madvlsi/gnd.sym} -1290 -1340 0 0 {name=l4 lab=GND}
-C {lab_pin.sym} -1290 -1400 2 0 {name=p12 sig_type=std_logic lab=An}
-C {lab_pin.sym} -1290 -1280 2 0 {name=p13 sig_type=std_logic lab=Bn}
 C {madvlsi/pmos3.sym} -1400 -1310 0 0 {name=M7
 L=0.15
 W=4

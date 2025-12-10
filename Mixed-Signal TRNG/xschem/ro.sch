@@ -61,30 +61,23 @@ N -1140 -1410 -1100 -1410 {lab=VP}
 N -1140 -1310 -1100 -1310 {lab=VP}
 N -1180 -1270 -1100 -1270 {lab=VN}
 N -1180 -1370 -1100 -1370 {lab=VN}
+N -800 -1610 -780 -1610 {lab=RO_TAP_1}
+N -800 -1310 -780 -1310 {lab=RO_TAP_4}
+N -800 -1410 -780 -1410 {lab=RO_TAP_3}
+N -800 -1510 -780 -1510 {lab=RO_TAP_2}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/inv.sym} -1410 -1570 0 0 {name=x1}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/inv.sym} -1410 -1470 0 0 {name=x2}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/inv.sym} -1410 -1370 0 0 {name=x3}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/inv.sym} -1410 -1270 0 0 {name=x4}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/inv.sym} -1410 -1170 0 0 {name=x5}
 C {iopin.sym} -1180 -1190 0 0 {name=p3 lab=RO_OUT}
-C {code_shown.sym} -660 -1260 0 0 {name=SPICE only_toplevel=false value=".tran 0.01n 10n
-.save all"}
-C {madvlsi/vsource.sym} -640 -1560 0 0 {name=VDD
-value=1.8}
-C {madvlsi/gnd.sym} -570 -1530 0 0 {name=l1 lab=GND}
-C {sky130_fd_pr/corner.sym} -660 -1430 0 0 {name=CORNER only_toplevel=false corner=tt}
-C {madvlsi/vsource.sym} -570 -1560 0 0 {name=VGND
-value=0}
 C {ipin.sym} -1660 -1140 3 0 {name=p1 lab=VP}
 C {ipin.sym} -1620 -1140 3 0 {name=p5 lab=VN}
-C {madvlsi/gnd.sym} -640 -1530 0 0 {name=l2 lab=GND}
-C {lab_pin.sym} -640 -1590 1 0 {name=p2 sig_type=std_logic lab=VP}
-C {lab_pin.sym} -570 -1590 1 0 {name=p4 sig_type=std_logic lab=VN}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/inv_tap.sym} -950 -1590 0 0 {name=x6}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/inv_tap.sym} -950 -1490 0 0 {name=x7}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/inv_tap.sym} -950 -1390 0 0 {name=x8}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/inv_tap.sym} -950 -1290 0 0 {name=x9}
-C {opin.sym} -800 -1610 0 0 {name=p6 lab=RO_TAP_1}
-C {opin.sym} -800 -1510 0 0 {name=p7 lab=RO_TAP_2}
-C {opin.sym} -800 -1410 0 0 {name=p8 lab=RO_TAP_3}
-C {opin.sym} -800 -1310 0 0 {name=p9 lab=RO_TAP_4}
+C {opin.sym} -780 -1610 0 0 {name=p6 lab=RO_TAP_1}
+C {opin.sym} -780 -1510 0 0 {name=p7 lab=RO_TAP_2}
+C {opin.sym} -780 -1410 0 0 {name=p8 lab=RO_TAP_3}
+C {opin.sym} -780 -1310 0 0 {name=p9 lab=RO_TAP_4}

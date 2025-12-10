@@ -1,13 +1,13 @@
 ** sch_path: /home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/dff.sch
-**.subckt dff Qn Q Dn1 D Dn2 CLK VP VN
+**.subckt dff VP Dn1 Qn D Q Dn2 VN CLK
 *.opin Qn
 *.opin Q
-*.ipin Dn1
 *.ipin D
-*.ipin Dn2
 *.ipin CLK
 *.ipin VP
 *.ipin VN
+*.iopin Dn2
+*.iopin Dn1
 XM1 net1 Dn1 VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 XM2 net1 CLK VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=4 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
@@ -56,19 +56,5 @@ XM23 VN CLK net6 VN sky130_fd_pr__nfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * 
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 XM24 Qn Q net6 VN sky130_fd_pr__nfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-VDD VP GND 1.8
-VGND VN GND 0
-VCLK CLK GND pulse(0 1.8 0 0.1n 0.1n 10n 20n)
-VD D GND pulse(0 1.8 0 0.1n 0.1n 40n 80n)
-V_Dn1 Dn1 GND pulse(1.8 0 0 0.1n 0.1n 10n 20n)
-V_Dn2 Dn2 GND pulse(0 1.8 0 0.1n 0.1n 10n 20n)
-**** begin user architecture code
-.lib /usr/local/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
-
-.tran 0.1n 400n
-.save all
-
-**** end user architecture code
 **.ends
-.GLOBAL GND
 .end

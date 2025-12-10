@@ -88,8 +88,8 @@ N -1350 -200 -1350 -140 {lab=#net7}
 N -1150 -170 -1150 -140 {lab=#net7}
 N -1560 -100 -900 -100 {lab=VN}
 N -1560 -60 -900 -60 {lab=CLK}
-N -1470 -170 -1470 -140 {lab=#net11}
-N -1560 -140 -1470 -140 {lab=#net11}
+N -1470 -170 -1470 -140 {lab=Dn2}
+N -1560 -140 -1470 -140 {lab=Dn2}
 N -1260 -200 -1260 -100 {lab=VN}
 N -1110 -200 -1110 -100 {lab=VN}
 N -1110 -340 -1110 -200 {lab=VN}
@@ -489,32 +489,6 @@ C {ipin.sym} -1560 -420 0 0 {name=p5 lab=D}
 C {ipin.sym} -1560 -60 0 0 {name=p8 lab=CLK}
 C {ipin.sym} -1560 -740 0 0 {name=p7 lab=VP}
 C {ipin.sym} -1560 -100 0 0 {name=p9 lab=VN}
-C {madvlsi/vsource.sym} -800 -710 0 0 {name=VDD
-value=1.8}
-C {madvlsi/gnd.sym} -730 -680 0 0 {name=l1 lab=GND}
-C {madvlsi/vsource.sym} -730 -710 0 0 {name=VGND
-value=0}
-C {madvlsi/gnd.sym} -800 -680 0 0 {name=l2 lab=GND}
-C {lab_pin.sym} -800 -740 2 0 {name=p1 sig_type=std_logic lab=VP}
-C {lab_pin.sym} -730 -740 2 0 {name=p10 sig_type=std_logic lab=VN}
-C {madvlsi/vsource.sym} -800 -580 0 0 {name=VCLK
-value="pulse(0 1.8 0 0.1n 0.1n 10n 20n)"}
-C {madvlsi/vsource.sym} -800 -460 0 0 {name=VD
-value="pulse(0 1.8 0 0.1n 0.1n 40n 80n)"}
-C {madvlsi/gnd.sym} -800 -430 0 0 {name=l5 lab=GND}
-C {madvlsi/gnd.sym} -800 -550 0 0 {name=l6 lab=GND}
-C {lab_pin.sym} -800 -610 2 0 {name=p11 sig_type=std_logic lab=CLK}
-C {lab_pin.sym} -800 -490 2 0 {name=p12 sig_type=std_logic lab=D}
-C {madvlsi/vsource.sym} -800 -330 0 0 {name=V_Dn1
-value="pulse(1.8 0 0 0.1n 0.1n 10n 20n)"}
-C {madvlsi/vsource.sym} -800 -210 0 0 {name=V_Dn2
-value="pulse(0 1.8 0 0.1n 0.1n 10n 20n)"}
-C {madvlsi/gnd.sym} -800 -180 0 0 {name=l3 lab=GND}
-C {madvlsi/gnd.sym} -800 -300 0 0 {name=l4 lab=GND}
-C {lab_pin.sym} -800 -360 2 0 {name=p13 sig_type=std_logic lab=Dn1}
-C {lab_pin.sym} -800 -240 2 0 {name=p14 sig_type=std_logic lab=Dn2}
-C {sky130_fd_pr/corner.sym} -670 -730 0 0 {name=CORNER only_toplevel=false corner=tt}
-C {code_shown.sym} -810 -90 0 0 {name=SPICE only_toplevel=false value=".tran 0.1n 400n
-.save all"}
-C {lab_pin.sym} -1560 -700 0 0 {name=p15 sig_type=std_logic lab=Dn1}
-C {lab_pin.sym} -1560 -140 0 0 {name=p16 sig_type=std_logic lab=Dn2}
+C {iopin.sym} -1560 -140 2 0 {name=p1 lab=Dn2}
+C {iopin.sym} -1560 -700 2 0 {name=p4 lab=Dn1
+}

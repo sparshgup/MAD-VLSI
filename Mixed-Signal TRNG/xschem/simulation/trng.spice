@@ -1,44 +1,42 @@
 ** sch_path: /home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/trng.sch
-**.subckt trng VP VN TRNG_OUT CLK RO_OUT
+**.subckt trng VP VN TRNG_OUT CLK RO_OUT Dn11 Dn21 Dn22 Dn23 Dn24 Dn12 Dn13 Dn14
 *.ipin VP
 *.ipin VN
 *.opin TRNG_OUT
 *.ipin CLK
-*.iopin RO_OUT
-x2 VP net7 net2 net6 VN CLK dff
-x3 VP net8 net1 net5 VN CLK dff
-x4 VP net12 net3 net9 VN CLK dff
-x5 VP net11 net4 net10 VN CLK dff
-x6 VP net5 net6 net14 net7 net8 VN xor
-x7 VP net9 net10 net13 net11 net12 VN xor
-x8 VP net14 net16 VN inv_tap
-x9 VP net13 net15 VN inv_tap
-x10 VP net14 net13 TRNG_OUT net15 net16 VN xor
-VDD VP GND 1.8
-VGND VN GND 0
-VCLK CLK GND pulse(0 1.8 0 0.1n 0.1n 20n 40n)
+*.opin RO_OUT
+*.opin Dn11
+*.opin Dn21
+*.opin Dn22
+*.opin Dn23
+*.opin Dn24
+*.opin Dn12
+*.opin Dn13
+*.opin Dn14
+x2 VP Dn12 net10 net2 net9 Dn22 VN CLK dff
+x3 VP Dn11 net12 net1 net11 Dn21 VN CLK dff
+x4 VP Dn13 net14 net3 net13 Dn23 VN CLK dff
+x5 VP Dn14 net16 net4 net15 Dn24 VN CLK dff
+x6 VP net11 net9 net6 net10 net12 VN xor
+x7 VP net13 net15 net5 net16 net14 VN xor
+x8 VP net6 net8 VN inv_tap
+x9 VP net5 net7 VN inv_tap
+x10 VP net6 net5 TRNG_OUT net7 net8 VN xor
 x1 net1 net2 net3 net4 RO_OUT VN VP ro
-VNOISE RO_OUT GND PWL(0 0 1n 0.001 2n -0.001 3n 0.002)
-**** begin user architecture code
-
-.options uic
-.tran 10p 100n uic
-.save all
-
-.lib /usr/local/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
-**** end user architecture code
 **.ends
 
-* expanding   symbol:  /home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/dff.sym # of pins=6
+* expanding   symbol:  /home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/dff.sym # of pins=8
 ** sym_path: /home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/dff.sym
 ** sch_path: /home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/dff.sch
-.subckt dff VP Qn D Q VN CLK
+.subckt dff VP Dn1 Qn D Q Dn2 VN CLK
 *.opin Qn
 *.opin Q
 *.ipin D
 *.ipin CLK
 *.ipin VP
 *.ipin VN
+*.iopin Dn2
+*.iopin Dn1
 XM1 net1 Dn1 VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 XM2 net1 CLK VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=4 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
@@ -87,21 +85,6 @@ XM23 VN CLK net6 VN sky130_fd_pr__nfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * 
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 XM24 Qn Q net6 VN sky130_fd_pr__nfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-VDD VP GND 1.8
-VGND VN GND 0
-VCLK CLK GND pulse(0 1.8 0 0.1n 0.1n 10n 20n)
-VD D GND pulse(0 1.8 0 0.1n 0.1n 40n 80n)
-V_Dn1 Dn1 GND pulse(1.8 0 0 0.1n 0.1n 10n 20n)
-V_Dn2 Dn2 GND pulse(0 1.8 0 0.1n 0.1n 10n 20n)
-**** begin user architecture code
-.lib /usr/local/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
-**** end user architecture code
-**** begin user architecture code
-
-.tran 0.1n 400n
-.save all
-
-**** end user architecture code
 .ends
 
 
@@ -128,21 +111,6 @@ XM1 net1 B A VP sky130_fd_pr__pfet_01v8 L=0.15 W=4 nf=1 ad='int((nf+1)/2) * W/nf
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 XM2 net1 Bn A VN sky130_fd_pr__nfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-**** begin user architecture code
-
-.tran 0.05n 60n
-.save all
-
-**** end user architecture code
-VDD VP GND 1.8
-**** begin user architecture code
-.lib /usr/local/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
-**** end user architecture code
-VGND VN GND 0
-V_A A GND pulse(0 1.8 0ns 0.1ns 0.1ns 5ns 10n)
-V_B B GND pulse(0 1.8 2.5ns 0.1ns 0.1ns 5ns 10n)
-V_An An GND pulse(1.8 0 0ns 0.1ns 0.1ns 5ns 10n)
-V_Bn Bn GND pulse(1.8 0 2.5ns 0.1ns 0.1ns 5ns 10n)
 XM7 Y net2 VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=4 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 XM8 Y net2 VN VN sky130_fd_pr__nfet_01v8 L=0.15 W=2 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
@@ -181,17 +149,6 @@ x2 VP net1 net2 VN inv
 x3 VP net2 net3 VN inv
 x4 VP net3 net4 VN inv
 x5 VP net4 RO_OUT VN inv
-**** begin user architecture code
-
-.tran 0.01n 10n
-.save all
-
-**** end user architecture code
-VDD VP GND 1.8
-**** begin user architecture code
-.lib /usr/local/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
-**** end user architecture code
-VGND VN GND 0
 x6 VP net1 RO_TAP_1 VN inv_tap
 x7 VP net2 RO_TAP_2 VN inv_tap
 x8 VP net3 RO_TAP_3 VN inv_tap
@@ -213,5 +170,4 @@ XM2 OUT IN VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=4 nf=1 ad='int((nf+1)/2) * W/n
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 .ends
 
-.GLOBAL GND
 .end
