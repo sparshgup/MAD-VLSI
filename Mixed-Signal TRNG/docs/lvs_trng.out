@@ -79,7 +79,7 @@ sky130_fd_pr__nfet_01v8 (12)               |sky130_fd_pr__nfet_01v8 (12)
 Number of devices: 24                      |Number of devices: 24                      
 Number of nets: 18                         |Number of nets: 18                         
 ---------------------------------------------------------------------------------------
-Netlists match uniquely.
+Netlists match uniquely with port errors.
 
 Subcircuit pins:
 Circuit 1: dff                             |Circuit 2: dff                             
@@ -93,7 +93,7 @@ VN                                         |VN
 Dn2                                        |Dn2                                        
 Dn1                                        |Dn1                                                                     
 ---------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
+Cell pin lists are equivalent..
 Device classes dff and dff are equivalent.
 
 Subcircuit summary:

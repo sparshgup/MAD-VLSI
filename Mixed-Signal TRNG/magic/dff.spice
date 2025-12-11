@@ -1,27 +1,27 @@
 * NGSPICE file created from dff.ext - technology: sky130A
 
 .subckt dff Dn1 Qn Q D Dn2 VP VN CLK
-X0 Q a_1120_n1420# a_910_0# VP sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
+X0 Q CLK a_910_0# VP sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
 X1 a_320_n1230# a_320_n620# a_n100_1320# VP sky130_fd_pr__pfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
 X2 a_30_n420# D VN VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
 X3 a_30_n1230# Dn2 VN VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
-X4 Qn a_1120_n1420# a_910_1320# VP sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
+X4 Qn CLK a_910_1320# VP sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
 X5 Qn Q a_780_n1230# VN sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
-X6 a_780_n1230# a_1120_n1420# VN VN sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
-X7 a_n100_1320# a_240_n1420# VP VP sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
+X6 a_780_n1230# CLK VN VN sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
+X7 a_n100_1320# CLK VP VP sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
 X8 a_320_n620# a_320_n1230# a_n100_0# VP sky130_fd_pr__pfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
 X9 Q Qn a_780_n420# VN sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
-X10 a_320_n620# a_240_n1420# a_30_n420# VN sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
+X10 a_320_n620# CLK a_30_n420# VN sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
 X11 a_910_1320# a_320_n1230# VP VP sky130_fd_pr__pfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
 X12 VN a_320_n1230# a_780_n1230# VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
 X13 VP Q Qn VP sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
 X14 VN a_320_n1230# a_320_n620# VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
 X15 VP Qn Q VP sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
-X16 a_n100_0# a_240_n1420# VP VP sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
-X17 a_780_n420# a_1120_n1420# VN VN sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
+X16 a_n100_0# CLK VP VP sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
+X17 a_780_n420# CLK VN VN sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
 X18 VN a_320_n620# a_320_n1230# VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
 X19 VP Dn1 a_n100_1320# VP sky130_fd_pr__pfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
-X20 a_320_n1230# a_240_n1420# a_30_n1230# VN sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
+X20 a_320_n1230# CLK a_30_n1230# VN sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
 X21 VN a_320_n620# a_780_n420# VN sky130_fd_pr__nfet_01v8 ad=0.5 pd=3 as=0.5 ps=3 w=1 l=0.15
 X22 a_910_0# a_320_n620# VP VP sky130_fd_pr__pfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
 X23 VP D a_n100_0# VP sky130_fd_pr__pfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
