@@ -1,0 +1,24 @@
+* NGSPICE file created from ro.ext - technology: sky130A
+
+.subckt inv_tap VP VN IN OUT
+X0 OUT IN VP VP sky130_fd_pr__pfet_01v8 ad=0.6 pd=3.4 as=0.6 ps=3.4 w=1.2 l=0.15
+X1 OUT IN VN VN sky130_fd_pr__nfet_01v8 ad=0.3 pd=2.2 as=0.3 ps=2.2 w=0.6 l=0.15
+.ends
+
+.subckt inv VP VN IN OUT
+X0 OUT IN VN VN sky130_fd_pr__nfet_01v8 ad=1 pd=5 as=1 ps=5 w=2 l=0.15
+X1 OUT IN VP VP sky130_fd_pr__pfet_01v8 ad=2 pd=9 as=2 ps=9 w=4 l=0.15
+.ends
+
+.subckt ro VP VN RO_OUT
+Xinv_tap_0 VP VN inv_1/IN inv_tap_0/OUT inv_tap
+Xinv_tap_1 VP VN inv_2/IN inv_tap_1/OUT inv_tap
+Xinv_tap_2 VP VN inv_3/IN inv_tap_2/OUT inv_tap
+Xinv_tap_3 VP VN inv_4/IN inv_tap_3/OUT inv_tap
+Xinv_0 VP VN RO_OUT inv_1/IN inv
+Xinv_1 VP VN inv_1/IN inv_2/IN inv
+Xinv_2 VP VN inv_2/IN inv_3/IN inv
+Xinv_3 VP VN inv_3/IN inv_4/IN inv
+Xinv_4 VP VN inv_4/IN RO_OUT inv
+.ends
+
