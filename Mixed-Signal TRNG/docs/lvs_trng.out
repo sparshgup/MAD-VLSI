@@ -91,7 +91,7 @@ CLK                                        |CLK
 VP                                         |VP                                         
 VN                                         |VN                                         
 Dn2                                        |Dn2                                        
-Dn1                                        |Dn1                                        
+Dn1                                        |Dn1                                                                     
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes dff and dff are equivalent.

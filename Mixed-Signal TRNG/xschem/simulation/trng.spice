@@ -1,28 +1,22 @@
 ** sch_path: /home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/trng.sch
-**.subckt trng VP VN TRNG_OUT CLK RO_OUT Dn11 Dn21 Dn22 Dn23 Dn24 Dn12 Dn13 Dn14
+**.subckt trng VP VN TRNG_OUT CLK RO_OUT CLKn
 *.ipin VP
 *.ipin VN
 *.opin TRNG_OUT
 *.ipin CLK
 *.opin RO_OUT
-*.opin Dn11
-*.opin Dn21
-*.opin Dn22
-*.opin Dn23
-*.opin Dn24
-*.opin Dn12
-*.opin Dn13
-*.opin Dn14
-x2 VP Dn12 net10 net2 net9 Dn22 VN CLK dff
-x3 VP Dn11 net12 net1 net11 Dn21 VN CLK dff
-x4 VP Dn13 net14 net3 net13 Dn23 VN CLK dff
-x5 VP Dn14 net16 net4 net15 Dn24 VN CLK dff
+*.iopin CLKn
+x2 VP CLKn net10 net2 net9 CLK VN CLK dff
+x3 VP CLKn net12 net1 net11 CLK VN CLK dff
+x4 VP CLKn net14 net3 net13 CLK VN CLK dff
+x5 VP CLKn net16 net4 net15 CLK VN CLK dff
 x6 VP net11 net9 net6 net10 net12 VN xor
 x7 VP net13 net15 net5 net16 net14 VN xor
 x8 VP net6 net8 VN inv_tap
 x9 VP net5 net7 VN inv_tap
 x10 VP net6 net5 TRNG_OUT net7 net8 VN xor
 x1 net1 net2 net3 net4 RO_OUT VN VP ro
+x11 VP CLK CLKn VN inv_tap
 **.ends
 
 * expanding   symbol:  /home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/dff.sym # of pins=8

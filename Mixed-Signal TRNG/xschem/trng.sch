@@ -56,8 +56,6 @@ N -1580 -1180 -1160 -1180 {lab=VP}
 N -1580 -620 -1560 -620 {lab=VN}
 N -860 -980 -840 -980 {lab=TRNG_OUT}
 N -2020 -860 -1940 -860 {lab=RO_OUT}
-N -2400 -1200 -2400 -600 {lab=VP}
-N -2360 -1200 -2360 -600 {lab=VN}
 N -2400 -920 -2320 -920 {lab=VP}
 N -2360 -940 -2320 -940 {lab=VN}
 N -2400 -1180 -1580 -1180 {lab=VP}
@@ -71,7 +69,6 @@ N -2400 -1030 -1960 -1030 {lab=VP}
 N -2360 -990 -1960 -990 {lab=VN}
 N -2400 -1130 -1960 -1130 {lab=VP}
 N -2360 -1090 -1960 -1090 {lab=VN}
-N -2440 -1200 -2440 -600 {lab=CLK}
 N -2440 -1070 -1960 -1070 {lab=CLK}
 N -2440 -970 -1960 -970 {lab=CLK}
 N -2440 -770 -1960 -770 {lab=CLK}
@@ -109,6 +106,37 @@ N -1660 -710 -1630 -710 {lab=#net16}
 N -1630 -770 -1630 -710 {lab=#net16}
 N -1630 -770 -1540 -770 {lab=#net16}
 N -1940 -900 -1940 -860 {lab=RO_OUT}
+N -1660 -970 -1610 -970 {lab=CLK}
+N -1610 -1200 -1610 -970 {lab=CLK}
+N -2360 -1240 -2360 -560 {lab=VN}
+N -2400 -1240 -2400 -560 {lab=VP}
+N -2440 -1240 -2440 -560 {lab=CLK}
+N -2440 -1200 -1610 -1200 {lab=CLK}
+N -1660 -1070 -1610 -1070 {lab=CLK}
+N -1660 -770 -1640 -770 {lab=CLK}
+N -1640 -770 -1640 -580 {lab=CLK}
+N -2440 -580 -1640 -580 {lab=CLK}
+N -1660 -670 -1640 -670 {lab=CLK}
+N -2360 -560 -2360 -420 {lab=VN}
+N -2400 -560 -2400 -420 {lab=VP}
+N -2440 -560 -2440 -420 {lab=CLK}
+N -2400 -490 -2330 -490 {lab=VP}
+N -2360 -450 -2330 -450 {lab=VN}
+N -2440 -470 -2330 -470 {lab=CLK}
+N -2030 -490 -2000 -490 {lab=CLKn}
+N -2000 -490 -2000 -400 {lab=CLKn}
+N -2480 -400 -2000 -400 {lab=CLKn}
+N -2480 -1240 -2480 -400 {lab=CLKn}
+N -1660 -730 -1610 -730 {lab=CLKn}
+N -1610 -730 -1610 -550 {lab=CLKn}
+N -1660 -830 -1610 -830 {lab=CLKn}
+N -1610 -830 -1610 -730 {lab=CLKn}
+N -2480 -550 -1610 -550 {lab=CLKn}
+N -1660 -1130 -1630 -1130 {lab=CLKn}
+N -1630 -1220 -1630 -1130 {lab=CLKn}
+N -1660 -1030 -1630 -1030 {lab=CLKn}
+N -1630 -1130 -1630 -1030 {lab=CLKn}
+N -2480 -1220 -1630 -1220 {lab=CLKn}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/dff.sym} -1810 -1000 0 0 {name=x2}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/dff.sym} -1810 -1100 0 0 {name=x3}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/dff.sym} -1810 -800 0 0 {name=x4}
@@ -118,19 +146,13 @@ C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/xor.sym} -1390 -780 0 0 {name=
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/inv_tap.sym} -1390 -970 0 0 {name=x8}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/inv_tap.sym} -1390 -890 0 0 {name=x9}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/xor.sym} -1010 -930 0 0 {name=x10}
-C {ipin.sym} -2400 -1200 1 0 {name=p1 lab=VP}
-C {ipin.sym} -2360 -1200 1 0 {name=p5 lab=VN}
+C {ipin.sym} -2400 -1240 1 0 {name=p1 lab=VP}
+C {ipin.sym} -2360 -1240 1 0 {name=p5 lab=VN}
 C {opin.sym} -840 -980 0 0 {name=p3 lab=TRNG_OUT
 
 }
-C {ipin.sym} -2440 -1200 1 0 {name=p6 lab=CLK}
+C {ipin.sym} -2440 -1240 1 0 {name=p6 lab=CLK}
 C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/ro.sym} -2170 -900 0 0 {name=x1}
 C {opin.sym} -1940 -900 0 0 {name=p8 lab=RO_OUT}
-C {opin.sym} -1660 -1130 0 0 {name=p2 lab=Dn11}
-C {opin.sym} -1660 -1070 0 0 {name=p4 lab=Dn21}
-C {opin.sym} -1660 -970 0 0 {name=p7 lab=Dn22}
-C {opin.sym} -1660 -770 0 0 {name=p9 lab=Dn23}
-C {opin.sym} -1660 -670 0 0 {name=p10 lab=Dn24}
-C {opin.sym} -1660 -1030 0 0 {name=p11 lab=Dn12}
-C {opin.sym} -1660 -830 0 0 {name=p12 lab=Dn13}
-C {opin.sym} -1660 -730 0 0 {name=p13 lab=Dn14}
+C {/home/madvlsi/Desktop/Mixed-Signal TRNG/xschem/inv_tap.sym} -2180 -470 0 0 {name=x11}
+C {iopin.sym} -2480 -1240 3 0 {name=p2 lab=CLKn}
